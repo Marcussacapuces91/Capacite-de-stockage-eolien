@@ -16,10 +16,10 @@ Il apparaît qu'une éolienne n'est pas un système linéaire mais répond à de
 
 Trois variables seront à préciser :
 
-* la vitesse du vent au démarrage du générateur (Vmin) ;
-* la vitesse du vent au plateau (saturation) à la production maximale (Vsat) ;
-* la vitesse de vent maximale avant extinction du générateur pour mise en sécurité (Vmax) ;
-* la puissance maximale installée (Pmax).
+* la vitesse du vent au démarrage du générateur (``Vmin``) ;
+* la vitesse du vent au plateau (saturation) à la production maximale (``Vsat``) ;
+* la vitesse de vent maximale avant extinction du générateur pour mise en sécurité (``Vmax``) ;
+* la puissance maximale installée (``Pmax``).
 
 Elles permettront de modéliser la fonction de production d'énergie en fonction de la vitesse du vent.
 
@@ -32,22 +32,14 @@ En première approximation, on ne tiendra pas compte des caractéristiques de l'
 
 On pourra préciser la fréquence de l'échantillonnage qui conditionnera toute la suite du fonctionnement de l'application. A noter que cette fréquence ne conditionne pas la distribution de la vitesse, mais seulement la durée de l'intervalle pendant lequel on considère la vitesse du vent stable.
 
-A priori, on partira sur une distribution selon la loi de *Weibull*, définie par ses 2 paramètres A et k que l'on retrouve dans la formule suivante :
+A priori, on partira sur une distribution selon la loi de *Weibull*, définie par ses 2 paramètres ``A`` et ``k`` que l'on retrouve dans la formule suivante :
 
 ![_d'après [https://wind-data.ch/tools/weibull.php](https://wind-data.ch/tools/weibull.php)_](weibullgleichung.jpg)
 
-* `A` est le facteur d'échelle exprimé en m/s, il est proportionnel à la moyenne de la vitesse ;
-* `k` est le facteur de forme, plus sa valeur est faible plus la variabilité est importante.
+* ``A`` est le facteur d'échelle exprimé en m/s, il est proportionnel à la moyenne de la vitesse ;
+* ``k`` est le facteur de forme, plus sa valeur est faible plus la variabilité est importante.
 
 Les valeurs prises par défaut sont `A = 6 m/s` et `k = 2`.
 
-
-
-
-
-
-
-
-
-
+La fréquence d'échantillonnage est fixée arbitrairement à `Fech = 1h`, mais sera réglable dans l'application, comme les 2 valeurs précédentes.
 
